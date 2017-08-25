@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+    background-color: #2A3132;
+    margin-bottom: 50px;
+    position: relative;
+}
+.bg-2 {
+    background-color: white;
+    border: 2px solid black;
+    text-align: left;
+    padding-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.bg-2 label {
+    font-size: 22px;
+    padding-top: 20px;
+}
+.bg-2 p {
+    font-size: 15px;
+}
+
+hr {
+    border: 1px solid black;
+}
+.bg-2 input {
+    margin-bottom: 5px;
+}
+/*Default Styling From The Bootstrap Template*/
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px}
+    
+    /* Set black background color, white text and some padding */
+    footer {
+        background-color: #555;
+        text-align: center;
+        color: white;
+        padding: 15px;
+        bottom: -100px;
+        position: absolute;
+        width: 100%;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login Screen</title>
+        <link href="../_css/bootstrap.min.css" rel="stylesheet">
+        <link href="../_css/styles_login.css" rel="stylesheet" type="text/css">
+        <script src="../_js/jquery-3.2.1.min.js"></script>
+        <script src="../_js/validate.js"></script>
+        <script src="../_css/bootstrap.min.css"></script>
+    </head>
+    
+<!--Free Bootstrap Template Used: https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
+    
+    <body id="index">
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="#">Jobs4u.ca</a>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <div class="container-fluid bg-1 text-center">    
+            <div class="row content">
+                <div class="col-sm-6 text-center"> 
+                    <div class="table-responsive">
+                        <table>
+                            <form action="../_php/login.php" method="post" onsubmit="validate_matching();">
+                                <tr> <h2>Login</h2> </tr> <hr>
+                                <td> <label for="Email">Email:</label> </td>
+                                <td> <input type="text" size="25" maxlength="35" name="email" id="Email" required> </td>
+                                <tr></tr>
+                                <td> <label for="Password">Password:</label> </td>
+                                <td> <input type="password" size="25" maxlength="35" name="password" id="Password" required> </td>
+                                <tr></tr>
+                                <td> <input type="submit" value="Log In"> </td>
+                            </form>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center"> 
+                    <div class="table-responsive">
+                        <form action="../_php/login.php" method="post">
+                            <table>
+                                <tr> <h2>Register</h2> </tr> <hr>
+                                <td> <label for="Email_reg">Email:</label> </td>
+                                <td> <input type="text" size="25" maxlength="50" name="email_reg" id="Email_reg" required onkeyup="showHint()"></td>
+                                <tr></tr>
+                                <p><span id="txtHint"></p></span> 
+                                <tr></tr>
+                                <td> <label for="Password_reg">Password:</label> </td>
+                                <td> <input type="password" size="25" maxlength="20" name="password_reg" id="Password_reg" required> </td>
+                                <tr></tr>
+                                <td> <label for="ReEnter">Re-enter Password:</label> </td>
+                                <td> <input type="password" size="25" maxlength="20" name="reenter" id="ReEnter" required> </td>
+                                <tr></tr>
+                                <td> <label for="FirstName">First Name:</label> </td>
+                                <td> <input type="text" size="25" maxlength="30" name="fname" id="FirstName" required> </td>
+                                <tr></tr>
+                                <td> <label for="LastName">Last Name:</label> </td>
+                                <td> <input type="text" size="25" maxlength="30" name="lname" id="LirstName" required> </td>
+                                <tr></tr>
+                                <td> <label>Type of User:</label> </td>
+                                <td> 
+                                    <label class="radio-inline">
+                                        <input type="radio" name="selector" value="1" >Personal
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="selector" value="2" >Business
+                                    </label>
+                                </td>
+                                <tr></tr>
+                                <td> <input type="submit"></td>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid text-center absolute-wrapper">
+            <p>&copy; 2017 Jobs4u.ca - A job finding site for everyone<p>
+        </footer>
+
+    </body>
+</html>
